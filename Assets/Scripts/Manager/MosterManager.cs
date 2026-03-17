@@ -18,6 +18,7 @@ public class MosterManager : MonoBehaviour
         {
             GameObject monster = Instantiate(prefabsMoster);
             monster.transform.position = transform.position;
+            nowTime = 0;
         }
     }
 }

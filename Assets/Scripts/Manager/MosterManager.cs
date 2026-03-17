@@ -6,10 +6,18 @@ public class MosterManager : MonoBehaviour
 {
     public GameObject prefabsMoster;
 
+    float nowTime;
+    public float createTime = 1f;
+
     // Update is called once per frame
     void Update()
     {
-        GameObject monster = Instantiate(prefabsMoster);
-        monster.transform.position = transform.position;
+        nowTime = nowTime + Time.deltaTime;
+        
+        if (nowTime < createTime)
+        {
+            GameObject monster = Instantiate(prefabsMoster);
+            monster.transform.position = transform.position;
+        }
     }
 }

@@ -11,5 +11,12 @@ public class Moster : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + direct * spd * Time.deltaTime;    
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.gameObject);
+        Destroy(gameObject);
     }
 }

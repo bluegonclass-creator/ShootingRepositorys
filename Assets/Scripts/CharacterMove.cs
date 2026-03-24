@@ -11,7 +11,7 @@ public class CharacterMove : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        Debug.Log ("h : " + h + ", V : " + v);
+        //Debug.Log ("h : " + h + ", V : " + v);
 
         //Vector3 direct = Vector3.right * h + Vector3.up * v;
         Vector3 direct = new Vector3(h, v, 0);

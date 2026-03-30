@@ -13,7 +13,9 @@ public class Moster : MonoBehaviour
     Vector3 direct = Vector3.down;
      
     private void Start()
-    { 
+    {
+        target = GameObject.Find("Character");
+
         int rndNum = Random.Range(0, 10);  
         if(rndNum % 3 == 0) //3ÀÇ ¹è¼ö
         {  

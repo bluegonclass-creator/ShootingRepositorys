@@ -8,7 +8,9 @@ public class Moster : MonoBehaviour
     public float spd = 1.0f;
 
     //Hierarchy에서 Character를 넣는다
-    public GameObject target; 
+    GameObject target;
+
+    public GameObject preEx;
     
     Vector3 direct = Vector3.down;
      
@@ -28,7 +30,10 @@ public class Moster : MonoBehaviour
     }
      
     private void OnCollisionEnter(Collision collision)
-    { 
+    {
+        GameObject ex = Instantiate(preEx);
+        ex.transform.position = transform.position;
+
         Destroy(collision.gameObject); 
         Destroy(gameObject);
     }
